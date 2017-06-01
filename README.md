@@ -1,18 +1,16 @@
 # recursive_maze_generation
 Uses a recursive algorithm to generate a model of a 2D maze, and from the model writes a pixel map that is a visual representation of the maze.
 
+'Interface' functions to be used by caller:
 
-===============================================
-'INTERFACE' FUNCTIONS TO BE USED BY CALLER
-===============================================
 
 I)
-int mazeGenerate(int width, int height,   // [3, 1000],  [3, 1000]
-    int wayPointX, int wayPointY,         // [1, width],   [1, height]
-    int wayPointAlleyLength,              // [0,  min(width, height)/2 ]
-    double wayPointDirectionPercent,      // [0.0,  1.0]
-    double straightProbability,           // [0.0,  1.0]
-    int printAlgorithmSteps);             // [TRUE | FALSE]
+int mazeGenerate(int width, int height,   
+    int wayPointX, int wayPointY,         
+    int wayPointAlleyLength,             
+    double wayPointDirectionPercent,   
+    double straightProbability,          
+    int printAlgorithmSteps);            
     
     width, height : dimensions of maze
     wayPointX, wayPointY : point through which solution must pass
